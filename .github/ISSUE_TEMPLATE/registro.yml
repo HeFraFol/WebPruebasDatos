@@ -1,0 +1,36 @@
+name: Nuevo registro
+description: Añade un registro a la web. Se publicará cuando se revise.
+title: "Nuevo registro"
+labels: ["pendiente"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rellena el formulario y pulsa **Create**. Tu registro aparecerá en la web en cuanto se revise.
+
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre
+      placeholder: "Ej.: Mercado de artesanía"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      placeholder: "Cuéntalo en unas líneas"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoría
+      options:
+        - General
+        - Evento
+        - Otro
+    validations:
+      required: true
